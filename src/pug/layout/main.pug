@@ -1,0 +1,24 @@
+block variables
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title #{pageTitle}
+        meta(
+            name="description"
+            content=description
+        )
+        meta(
+            name="viewport"
+            content="width=device-width"
+        )
+        link(
+            rel="shortcut icon"
+            href="favicon.ico"
+            type="image/x-icon"
+        )
+
+    body(class=pageClass)
+        block buttons
+
