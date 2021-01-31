@@ -1,0 +1,10 @@
+mixin tag (text, type, className, icon)
+    button.tag(class=[type && `tag_${type}`, className && `tag_${className}`])(
+        type="button"
+    )
+        span.tag__text=text
+        if icon
+            svg.tag__icon()
+                use(
+                    xlink:href=icon
+                )

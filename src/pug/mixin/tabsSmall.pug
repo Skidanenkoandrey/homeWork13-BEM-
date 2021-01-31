@@ -1,0 +1,9 @@
+mixin tabs-small(text, type, size, position, icon, isActive)
+    button.button-tabs(class=[type && `button-tabs_${type}`, size && `button-tabs_${size}`, isActive && `button-tabs_${isActive}`])(
+        type="button"
+    ) #{text}
+        if position
+            svg.button-tabs__icon(class=[position && `button-tabs__icon_${position}`])
+                use(
+                    xlink:href=icon
+                )

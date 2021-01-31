@@ -1,0 +1,10 @@
+include ../mixin/tag
+block buttonsSmallTag
+.row
+    .column.column_tag
+        +tag("Tag","secondary", "", "#cross")
+        +tag("Tag","primary", "", "#cross")
+.row
+    .column.column_tag.column_tag-simple
+        +tag("Tag", "secondary", "simple")
+        +tag("Tag", "primary")

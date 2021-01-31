@@ -1,0 +1,102 @@
+.button {
+  &_small {
+    padding: 8px 26px;
+    font-size: $font-s;
+
+    & .button__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+
+  &_warning {
+    background: $warning;
+    color: $white
+  }
+
+  &_warning .button__icon {
+    fill: transparent;
+    stroke: $white;
+  }
+
+  &:hover.button_warning .button__icon {
+    stroke: $primary-color;
+  }
+
+  &-tabs.button-tabs_small .button-tabs__icon {
+    fill: $secondary-color;
+    stroke: $transparent;
+
+  }
+
+  &-tabs.button-tabs_active .button-tabs__icon {
+    fill: $white;
+  }
+
+  &-tabs_small {
+    padding: 8px 24px;
+  }
+
+  &-group.button-group_center .button-tabs_small,
+  &-group.button-group_center .button-tabs_small,
+  &-group.button-group_center .button-tabs_small {
+    padding: 5px 12px;
+  }
+
+  &-group.button-group_bottom .button-tabs_small,
+  &-group.button-group_bottom .button-tabs_small,
+  &-group.button-group_bottom .button-tabs_small {
+    padding: 8px 24px;
+  }
+}
+
+
+.row_bottom .column_left .row:nth-child(n+2) .button {
+  padding: 8px 11px;
+}
+
+.row_bottom .column_left {
+  width: 50%;
+}
+
+.row_bottom .column_center {
+  width: 30%;
+}
+
+.row_bottom .column_right {
+  width: 15%;
+}
+
+.button-search {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+
+  &_success {
+    background: $success;
+  }
+
+  & .button__icon {
+    fill: $white;
+    stroke: none;
+  }
+
+  &_warning {
+    background: $warning;
+    margin-right: 20px;
+  }
+
+  &_small {
+    width: 36px;
+    height: 36px;
+
+    & .button__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

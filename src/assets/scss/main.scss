@@ -1,12 +1,10 @@
 @import "varibles";
 @import "fonts";
-@import "header";
-@import "content";
-@import "footer";
 
 * {
   box-sizing: border-box;
-  font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
 html * {
@@ -23,110 +21,32 @@ html * {
       display: none;
     }
   }
-
-  margin: 0;
-  padding: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: $primary-color;
   font-size: $font-s;
 }
 
-.button {
-  background: $darkBlue-color;
-  border-radius: 2px;
-  border: 2px solid transparent;
-  transition: 0.2s;
-  color: $button-color;
-  padding: 5px 0;
-
-  &:hover {
-    background: transparent;
-    border-color: $dark-color;
-    box-shadow: 0 2px 6px $dark-color;
-    color: $dark-color;
-    transition: 0.2s;
-  }
-
-  &_header {
-    max-width: 160px;
-    width: 100%;
-    padding: 2px;
-    font-size: $font-xs;
-  }
-
-  &-group__button,
-  &_offer {
-    max-width: 189px;
-    width: 45%;
-
-    &:first-child {
-      margin-right: 5.6%;
-    }
-
-  }
-
-  &_offer {
-    width: 100%;
-  }
-
-  &_footer {
-    max-width: 109px;
-    width: 100%;
-    padding: 0 5px;
-    font-size: $font-xs;
-  }
-
-  &-group {
-    margin-top: 70px;
-  }
+.container {
+  min-width: 20rem;
+  max-width: 70rem;
+  width: 100%;
+  margin: 30px auto 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .title {
-  color: $dark-color;
-  margin-bottom: 16px;
-  font-size: $font-l;
-
-  &__header {
-    font-size: $font-xl;
-    margin-bottom: 20px;
-    line-height: 66px;
-  }
+  font-size: 25px;
+  line-height: 30px;
+  color: $secondary-color;
 }
 
-.text {
-  font-size: $font-m;
-  margin-bottom: 20px;
-
-  &-header_bottom {
-    margin-bottom: 0;
-  }
-
-}
-
-.features__img {
-  max-width: 100%;
-}
-
-@media screen and (max-width: 480px) {
-  .button {
-    &-group__button:first-child {
-      margin-right: 0;
-    }
-
-    &-group {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &-group__button {
-      width: 46%;
-    }
-  }
-}
+@import "buttons-big";
+@import "buttons-small";
+@import "tag";

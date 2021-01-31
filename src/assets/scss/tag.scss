@@ -1,0 +1,41 @@
+.column_tag{
+  display: flex;
+  width: 100%;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  background: $white;
+  border: 1px solid $border-color;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  &__icon {
+    width: 7px;
+    height: 7px;
+    fill: rgba($secondary-color,.7);
+    margin-left: 11px;
+  }
+
+  &_secondary {
+    margin-right: 12px;
+  }
+
+  &_primary {
+    background: $primary-color;
+    color: $white;
+  }
+
+  &_simple {
+    background: $disabled;
+  }
+
+  &_primary &__icon {
+    fill: rgba($white,.7);
+  }
+}
+
+.column_tag-simple .tag {
+  padding: 6px 14px;
+}

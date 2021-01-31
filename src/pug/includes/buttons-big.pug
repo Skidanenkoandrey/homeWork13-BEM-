@@ -1,0 +1,32 @@
+include ../mixin/button
+include ../mixin/button-tabs
+h2.title Buttons Big
+section.row.row_top
+    .column.column_left
+        .row
+            +button("Download", "primary")
+            +button("Download", "disabled","", true)
+            +button("Download", "secondary")
+        .row
+            +button("Download", "primary","icon",false,"", "#download")
+            +button("Download", "disabled", "icon", true,"","#download")
+            +button("Download", "secondary","icon",false,"", "#download")
+        .row
+            +button("Download", "primary","icon",false,"#download", "")
+            +button("Download", "disabled", "icon", true,"#download","")
+            +button("Download", "secondary","icon",false,"#download","")
+    .column.column_right
+        .row
+            .button-group
+                +button-tabs("left", "#search", "left", "active")
+                +button-tabs("center", "#download", "center")
+                +button-tabs("right", "#archive", "right")
+        .row
+            .button-group.button-group_center
+                +button-tabs("left", "", "", "active", "Tab 1")
+                +button-tabs("right", "", "", "", "Tab 2")
+        .row
+            .button-group.button-group_bottom
+                +button-tabs("left", "", "", "active", "S")
+                +button-tabs("center", "", "", "", "M")
+                +button-tabs("right", "", "", "", "L")

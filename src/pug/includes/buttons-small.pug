@@ -1,0 +1,38 @@
+include ../mixin/button
+include ../mixin/tabsSmall
+include  ../mixin/button-search
+h2.title Buttons Small
+section.row.row_bottom
+    .column.column_left
+        .row
+            +button("Download", "primary", "small", false)
+            +button("Download", "disabled", "small", true)
+            +button("Download", "secondary", "small", false)
+        .row
+            +button("Download", "primary","small",false,"", "#download")
+            +button("Download", "disabled", "small", true,"","#download")
+            +button("Download", "secondary","small",false,"", "#download")
+        .row
+            +button("Download", "warning","small",false,"#download", "")
+            +button("Download", "disabled", "small", true,"#download","")
+            +button("Download", "secondary","small",false,"#download","")
+    .column.column_center
+        .row
+            .button-group
+                +tabs-small("Tab 1", "left", "small", "", "","active")
+                +tabs-small("Tab 2", "right", "small", "", "", "")
+
+        .row
+            .button-group.button-group_center
+                +tabs-small("", "left", "small", "left", "#search", "active")
+                +tabs-small("", "center", "small", "center", "#search")
+                +tabs-small("", "right", "small", "right", "#search")
+        .row
+            .button-group.button-group_bottom
+                +tabs-small("S", "left", "small", "", "", "active")
+                +tabs-small("M", "center", "small", "", "")
+                +tabs-small("L", "right", "small","", "")
+    .column.column_right
+        .row
+            +button-search("#search", "warning", "small")
+            +button-search("#search", "success", "")

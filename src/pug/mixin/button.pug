@@ -1,0 +1,15 @@
+mixin button(text, type, size, isDisabled, iconLeft, iconRight)
+    button.button(class=[type && `button_${type}`, size && `button_${size}`])(
+        type="button"
+    )&attributes({"disabled": isDisabled})
+        if iconLeft && !iconRight
+            svg.button__icon.button__icon_left()
+                use(
+                    xlink:href=iconLeft
+                )
+        span.button__text=text
+        if iconRight && !iconLeft
+            svg.button__icon.button__icon_right()
+                use(
+                    xlink:href=iconRight
+                )

@@ -1,0 +1,8 @@
+mixin button-search (icon, type, size)
+    button.button-search(class=[type && `button-search_${type}`, size && `button-search_${size}`])(
+    type="button"
+    )
+        svg.button__icon()
+            use(
+                xlink:href=icon
+            )
